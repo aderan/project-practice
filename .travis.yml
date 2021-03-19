@@ -48,5 +48,5 @@ deploy:
     tags: true
     jdk: oraclejdk8
 
-
+  github_token: $GITHUB_TOKEN
 
