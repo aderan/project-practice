@@ -4,6 +4,15 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile rootProject.file("keystore/aderan.jks")
+            // TODO use config
+            storePassword '12345678'
+            keyAlias 'projectpractice'
+            keyPassword '12345678'
+        }
+    }
     compileSdkVersion 30
 
     defaultConfig {
@@ -20,6 +29,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
