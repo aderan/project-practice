@@ -34,7 +34,7 @@ script:
   - "./gradlew clean assembleRelease --stacktrace"
 
 before_deploy:
-  - cd app/build/outputs/apk/release/app-release.apk ProjectPractice.apk
+  - cp app/build/outputs/apk/release/app-release.apk ProjectPractice.apk
 
 deploy:
   provider: releases
