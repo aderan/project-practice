@@ -1,7 +1,7 @@
 package com.aderan.projectpractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.agora.netless.library.Test
 
 class MainActivity : AppCompatActivity() {

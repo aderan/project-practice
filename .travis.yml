@@ -28,7 +28,7 @@ before_install:
   - yes | sdkmanager "build-tools;30.0.3"
 
 before_script:
-  # - cp $TRAVIS_BUILD_DIR/aderan.jks $HOME/keystore
+# - cp $TRAVIS_BUILD_DIR/aderan.jks $HOME/keystore
 
 script:
   - "./gradlew clean assembleRelease --stacktrace"
@@ -38,6 +38,7 @@ before_deploy:
 
 deploy:
   provider: releases
+  api_key: $GITHUB_TOKEN
   file: ProjectPractice.apk
   overwrite: true
   cleanup: true
@@ -45,6 +46,4 @@ deploy:
     repo: aderan/project-practice
     all_branches: true
     tags: true
-  token: $GITHUB_TOKEN
-  # github_token: $GITHUB_TOKEN
 

@@ -54,4 +54,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation project(':library')
+
+    implementation 'com.github.netless-io:whiteboard-android:2.12.9'
 }
