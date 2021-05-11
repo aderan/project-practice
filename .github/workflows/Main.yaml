@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Generate Apk
 on:
   push:
     branches:
@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-outputs
-          path: /app/build/outputs
+          path: app/build/outputs
